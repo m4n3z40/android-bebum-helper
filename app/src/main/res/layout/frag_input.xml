@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp" >
+
+            <ToggleButton
+                android:id="@+id/btn_sex"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_sex"
+                android:checked="true"
+                android:textOff="@string/empty"
+                android:textOn="@string/empty" />
+
+            <View
+                android:id="@+id/line_center"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/tv_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/btn_sex"
+                android:layout_alignStart="@id/btn_sex"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/line_center"
+                android:layout_toStartOf="@id/line_center"
+                android:gravity="center"
+                android:text="@string/male"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <TextView
+                android:id="@+id/tv_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/btn_sex"
+                android:layout_alignRight="@id/btn_sex"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/line_center"
+                android:layout_toRightOf="@id/line_center"
+                android:gravity="center"
+                android:text="@string/female"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/weight"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_weight_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/kg"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/sb_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="130"
+            android:paddingBottom="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/height"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_height_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/cm"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/sb_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="80"
+            android:paddingBottom="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_old"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/old"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_old_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/year"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/sb_old"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="62"
+            android:paddingBottom="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" />
+                
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="start"
+            android:text="@string/how_often"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" >
+
+            <ToggleButton
+                android:id="@+id/btn_rare"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rare"
+                android:textColor="@color/toggle_text"
+                android:textOff="@string/rarely"
+                android:textOn="@string/rarely" />
+
+            <ToggleButton
+                android:id="@+id/btn_sometimes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/btn_sometimes"
+                android:checked="true"
+                android:textColor="@color/toggle_text"
+                android:textOff="@string/sometimes"
+                android:textOn="@string/sometimes" />
+
+            <ToggleButton
+                android:id="@+id/btn_often"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/btn_often"
+                android:textColor="@color/toggle_text"
+                android:textOff="@string/often"
+                android:textOn="@string/often" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_whatDrink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="start"
+            android:text="@string/what_drink"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="30dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/beer" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/beer_num1"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tv_beer1_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/val" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <View
+                        android:id="@+id/beer1_center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+
+                    <Button
+                        android:id="@+id/btn_minus_beer1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="-0.5dp"
+                        android:layout_marginRight="-0.5dp"
+                        android:layout_toLeftOf="@id/beer1_center"
+                        android:layout_toStartOf="@id/beer1_center"
+                        android:background="@drawable/btn_minus"
+                        android:minHeight="10dp"
+                        android:text="@string/minus"
+                        android:textColor="@color/red" />
+
+                    <Button
+                        android:id="@+id/btn_plus_beer1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="-0.5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginStart="-0.5dp"
+                        android:layout_toEndOf="@id/beer1_center"
+                        android:layout_toRightOf="@id/beer1_center"
+                        android:background="@drawable/btn_plus"
+                        android:minHeight="10dp"
+                        android:text="@string/plus"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/beer" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/beer_num2"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tv_beer2_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/val" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <View
+                        android:id="@+id/beer2_center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+
+                    <Button
+                        android:id="@+id/btn_minus_beer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="-0.5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="-0.5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_toLeftOf="@id/beer2_center"
+                        android:layout_toStartOf="@id/beer2_center"
+                        android:background="@drawable/btn_minus"
+                        android:text="@string/minus"
+                        android:textColor="@color/red" />
+
+                    <Button
+                        android:id="@+id/btn_plus_beer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="-0.5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginStart="-0.5dp"
+                        android:layout_toEndOf="@id/beer2_center"
+                        android:layout_toRightOf="@id/beer2_center"
+                        android:background="@drawable/btn_plus"
+                        android:text="@string/plus"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/beer" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/beer_num3"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tv_beer3_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/val" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <View
+                        android:id="@+id/beer3_center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+
+                    <Button
+                        android:id="@+id/btn_minus_beer3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="-0.5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="-0.5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_toLeftOf="@id/beer3_center"
+                        android:layout_toStartOf="@id/beer3_center"
+                        android:background="@drawable/btn_minus"
+                        android:text="@string/minus"
+                        android:textColor="@color/red" />
+
+                    <Button
+                        android:id="@+id/btn_plus_beer3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="-0.5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginStart="-0.5dp"
+                        android:layout_toEndOf="@id/beer3_center"
+                        android:layout_toRightOf="@id/beer3_center"
+                        android:background="@drawable/btn_plus"
+                        android:text="@string/plus"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="30dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/wine" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/wine_num1"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tv_wine1_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/val" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <View
+                        android:id="@+id/wine1_center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+
+                    <Button
+                        android:id="@+id/btn_minus_wine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="-0.5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="-0.5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_toLeftOf="@id/wine1_center"
+                        android:layout_toStartOf="@id/wine1_center"
+                        android:background="@drawable/btn_minus"
+                        android:text="@string/minus"
+                        android:textColor="@color/red" />
+
+                    <Button
+                        android:id="@+id/btn_plus_wine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="-0.5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginStart="-0.5dp"
+                        android:layout_toEndOf="@id/wine1_center"
+                        android:layout_toRightOf="@id/wine1_center"
+                        android:background="@drawable/btn_plus"
+                        android:text="@string/plus"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/wine" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/wine_num2"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tv_wine2_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/val" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <View
+                        android:id="@+id/wine2_center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+
+                    <Button
+                        android:id="@+id/btn_minus_wine2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="-0.5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="-0.5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_toLeftOf="@id/wine2_center"
+                        android:layout_toStartOf="@id/wine2_center"
+                        android:background="@drawable/btn_minus"
+                        android:text="@string/minus"
+                        android:textColor="@color/red" />
+
+                    <Button
+                        android:id="@+id/btn_plus_wine2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="-0.5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginStart="-0.5dp"
+                        android:layout_toEndOf="@id/wine2_center"
+                        android:layout_toRightOf="@id/wine2_center"
+                        android:background="@drawable/btn_plus"
+                        android:text="@string/plus"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/wine" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/wine_num3"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tv_wine3_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/val" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <View
+                        android:id="@+id/wine3_center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+
+                    <Button
+                        android:id="@+id/btn_minus_wine3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="-0.5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="-0.5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_toLeftOf="@id/wine3_center"
+                        android:layout_toStartOf="@id/wine3_center"
+                        android:background="@drawable/btn_minus"
+                        android:text="@string/minus"
+                        android:textColor="@color/red" />
+
+                    <Button
+                        android:id="@+id/btn_plus_wine3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="-0.5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginStart="-0.5dp"
+                        android:layout_toEndOf="@id/wine3_center"
+                        android:layout_toRightOf="@id/wine3_center"
+                        android:background="@drawable/btn_plus"
+                        android:text="@string/plus"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="30dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/vodka" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/vodka_num1"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tv_vodka1_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/val" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <View
+                        android:id="@+id/vodka1_center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+
+                    <Button
+                        android:id="@+id/btn_minus_vodka1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="-0.5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="-0.5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_toLeftOf="@id/vodka1_center"
+                        android:layout_toStartOf="@id/vodka1_center"
+                        android:background="@drawable/btn_minus"
+                        android:text="@string/minus"
+                        android:textColor="@color/red" />
+
+                    <Button
+                        android:id="@+id/btn_plus_vodka1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="-0.5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginStart="-0.5dp"
+                        android:layout_toEndOf="@id/vodka1_center"
+                        android:layout_toRightOf="@id/vodka1_center"
+                        android:background="@drawable/btn_plus"
+                        android:text="@string/plus"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/vodka" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/vodka_num2"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tv_vodka2_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/val" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <View
+                        android:id="@+id/vodka2_center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+
+                    <Button
+                        android:id="@+id/btn_minus_vodka2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="-0.5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="-0.5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_toLeftOf="@id/vodka2_center"
+                        android:layout_toStartOf="@id/vodka2_center"
+                        android:background="@drawable/btn_minus"
+                        android:text="@string/minus"
+                        android:textColor="@color/red" />
+
+                    <Button
+                        android:id="@+id/btn_plus_vodka2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="-0.5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginStart="-0.5dp"
+                        android:layout_toEndOf="@id/vodka2_center"
+                        android:layout_toRightOf="@id/vodka2_center"
+                        android:background="@drawable/btn_plus"
+                        android:text="@string/plus"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/vodka" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/vodka_num3"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tv_vodka3_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/val" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <View
+                        android:id="@+id/vodka3_center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+
+                    <Button
+                        android:id="@+id/btn_minus_vodka3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="-0.5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="-0.5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_toLeftOf="@id/vodka3_center"
+                        android:layout_toStartOf="@id/vodka3_center"
+                        android:background="@drawable/btn_minus"
+                        android:text="@string/minus"
+                        android:textColor="@color/red" />
+
+                    <Button
+                        android:id="@+id/btn_plus_vodka3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="-0.5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginStart="-0.5dp"
+                        android:layout_toEndOf="@id/vodka3_center"
+                        android:layout_toRightOf="@id/vodka3_center"
+                        android:background="@drawable/btn_plus"
+                        android:text="@string/plus"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="start"
+            android:paddingTop="30dp"
+            android:text="@string/when_start"
+            android:textColor="@color/black" />
+
+        <DatePicker
+            android:id="@+id/date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:scrollbarStyle="outsideOverlay" />
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:scrollbarStyle="outsideOverlay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/btn_result"
+            android:text="@string/result"
+            android:textColor="@color/button_text" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BebumHelper</string>
+    <string name="action_about">Sobre o App</string>
+	<string name="action_info">Info</string>
+    <string name="weight">Seu peso:</string>
+    <string name="height">Sua altura:</string>
+    <string name="kg">kg</string>
+    <string name="old">Sua idade:</string>
+    <string name="what_drink">O que você bebeu?</string>
+    <string name="beer_num1">3%</string>
+    <string name="beer_num2">4.5%</string>
+    <string name="beer_num3">6%</string>
+    <string name="wine_num1">12%</string>
+    <string name="wine_num2">15%</string>
+    <string name="wine_num3">18%</string>
+    <string name="vodka_num1">40%</string>
+    <string name="vodka_num2">50%</string>
+    <string name="vodka_num3">80%</string>
+    <string name="val">0</string>
+    <string name="empty"></string>
+    <string name="when_start">Quando você começou a beber?</string>
+    <string name="result">Ver resultados</string>
+	<string name="cm">cm</string>
+	<string name="year">anos</string>
+	<string name="h">h</string>
+	<string name="plus">+</string>
+	<string name="minus">-</string>
+	<string name="promil">‰</string>
+	<string name="output_title">Concentração de alcool atual:</string>
+    <string name="output_subtitle">Tempo até desintoxicação:</string>
+    <string name="not_drunk">Desintoxicado</string>
+	<string name="male">Masculino</string>
+	<string name="female">Feminino</string>
+	<string name="how_often">Com que frequência você bebe?</string>
+	<string name="rarely">Raramente</string>
+	<string name="sometimes">Às vezes</string>
+	<string name="often">Frequentemente</string>
+    <string name="info">	    				Capacidade de proporção de álcool:\n\nCerveja	500ml.\nVinho	200ml.\nVodka	50ml.\n\nA concentração de ácool no sangue é calculada da seguinte forma:\n\nP = (A / TBW) * 0.8 - (T * e)\n\nA = OB * PR * 0.79\n\nA - Quantidade de álcool consumido em gramas\nOB - Volume da bebiba em milímetros\nPR - Porcentagem de álcool\n(expressado em centenas ex. 0.05 to 5%)\n0.79 - Coeficiente da densidade do álcool etílico\n\nT - tempo gasto em consumo (horas)\ne - coeficiente de eliminação de álcool do corpo ie:\n0.1 por mil por hora para pessoas que bebem raramente\n0.15 por mil por hora para pessoas que bebem de vez em quando\n0.2 por mil por hora para pessoas que bebem frequentemente\n\nTBW - quantidade de fluidos corporais\n\nHomens:\nTBW = 2447 - (0.09156 * L) + (0.1074 * W) + (0.3362 * M)\n\nMulheres:\nTBW = -2.097 + (0.1069 * W) + (0.2466 * M)\n\n onde:\nM - é a massa em kilos\nW - altura em centimetros\nL - idade em anos\n\n0.8 - coeficiente de álgua no corpo.\n
+	    				\n\nLembre-se: se beber, não dirija!</string>
+</resources>
